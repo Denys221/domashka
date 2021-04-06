@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 19px;
+
+  span {
+    line-height: 32px;
+    letter-spacing: 0.68px;
+    color: #222222;
+    text-decoration: none;
+    text-transform: uppercase;
+
+
+    b {
+      color: #f16d7f;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 93px;
+    height: 19px;
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-right: 349px;
+
+  button {
+    width: 87px;
+    height: 38px;
+  }
+
+  input {
+    width: 317px;
+    height: 38px;
+  }
+}
+
+.my-account {
+  display: flex;
+  align-items: center;
+  img {
+    width: 32px;
+    height: 29px;
+    margin: 26px;
+  }
+
+  button {
+    width: 130px;
+    height: 38px;
+    background-color: #f16d7f;
+  }
+}

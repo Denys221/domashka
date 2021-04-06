@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.header {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px; }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto; }
+
+.header-top {
+  display: flex;
+  align-items: center; }
+
+.logo {
+  margin-right: 19px; }
+  .logo span {
+    line-height: 32px;
+    letter-spacing: 0.68px;
+    color: #222222;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .logo span b {
+      color: #f16d7f; }
+  .logo a {
+    display: flex;
+    align-items: center; }
+  .logo .logo img {
+    width: 93px;
+    height: 19px; }
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-right: 349px; }
+  .form button {
+    width: 87px;
+    height: 38px; }
+  .form input {
+    width: 317px;
+    height: 38px; }
+
+.my-account {
+  display: flex;
+  align-items: center; }
+  .my-account img {
+    width: 32px;
+    height: 29px;
+    margin: 26px; }
+  .my-account button {
+    width: 130px;
+    height: 38px;
+    background-color: #f16d7f; }
+
+/*# sourceMappingURL=style.css.map */
