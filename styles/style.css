@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px; }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto; }
+
+.header-top {
+  display: flex;
+  align-items: center; }
+
+.logo {
+  margin-right: 19px; }
+  .logo span {
+    line-height: 32px;
+    letter-spacing: 0.68px;
+    color: #222222;
+    width: 93px;
+    height: 19px;
+    text-transform: uppercase; }
+    .logo span b {
+      color: #f16d7f; }
+  .logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center; }
+  .logo img {
+    display: block;
+    margin-right: 13px;
+    width: 59px;
+    height: 51px; }
+
+.form {
+  display: flex;
+  align-items: center; }
+  .form form {
+    display: flex; }
+  .form button {
+    width: 87px;
+    height: 38px;
+    border: solid 1px #e6e6e6;
+    color: #222222;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2.29;
+    letter-spacing: 0.35px; }
+  .form input {
+    padding-left: 13px;
+    width: 317px;
+    height: 38px;
+    border: solid 1px #e6e6e6;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2.29;
+    letter-spacing: 0.35px;
+    color: #a4a4a4; }
+
+.my-account {
+  display: flex;
+  align-items: center;
+  margin-left: auto; }
+  .my-account img {
+    width: 32px;
+    height: 29px;
+    margin: 26px; }
+  .my-account button {
+    width: 130px;
+    height: 38px;
+    background-color: #f16d7f;
+    font-size: 15px;
+    line-height: 2.13;
+    letter-spacing: 0.38px;
+    color: #ffffff;
+    border: none; }
+
+section {
+  width: 100%;
+  height: 665px; }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: solid 1px #e6e6e6; }
+  .menu a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.86;
+    color: #222222;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .menu li {
+    list-style-type: none; }
+
+.baner {
+  width: 100%;
+  height: 614px;
+  background-image: url("../img/pacan.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #e8e8e8; }
+  .baner .container {
+    height: 100%; }
+  .baner h1 {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #222222;
+    text-transform: uppercase; }
+    .baner h1 span {
+      display: block;
+      font-size: 60px;
+      letter-spacing: 1.5px; }
+    .baner h1 b {
+      color: #f16d7f; }
+  .baner .top-wrap {
+    display: flex;
+    align-items: center;
+    height: 100%; }
+    .baner .top-wrap a {
+      text-decoration: none; }
+
+.cards {
+  display: flex;
+  margin-top: 100px; }
+  .cards .card-whith {
+    background-color: #ffffff;
+    display: inline-block;
+    margin-top: 26px;
+    padding: 16px 20px; }
+  .cards .big {
+    width: 560px;
+    height: 542px; }
+  .cards .small {
+    width: 560px;
+    height: 260px; }
+  .cards h3 {
+    text-transform: uppercase;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.45px;
+    color: #222222; }
+  .cards span {
+    display: block;
+    font-size: 30px;
+    letter-spacing: 0.75px;
+    color: #f16d7f; }
+  .cards .card-left .big {
+    margin: 0 20px 20px 0;
+    background-image: url("../img/for-men1.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .cards .card-left .small {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/accesories1.png"); }
+  .cards .card-right .small {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/women1.png"); }
+  .cards .card-right .big {
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/for-kids1.png"); }
+
+/*# sourceMappingURL=style.css.map */
