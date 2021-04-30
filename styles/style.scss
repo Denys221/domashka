@@ -18,33 +18,34 @@ header {
   margin: 0 auto;
 }
 
+.logo {
+  margin-right: 20px;
+
+  span {
+    font-family: 'latolight';
+    font-size: 27px;
+    letter-spacing: 0.68px;
+    color: #222222;
+    text-transform: uppercase;
+    margin-left: 12px;
+
+    b {
+      font-family: 'latoblack';
+      color: #f16d7f;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+}
 .header-top {
   display: flex;
   align-items: center;
 
-  .logo {
-    margin-right: 20px;
 
-    span {
-      font-family: 'latolight';
-      font-size: 27px;
-      letter-spacing: 0.68px;
-      color: #222222;
-      height: 19px;
-      text-transform: uppercase;
-
-      b {
-        font-family: 'latoblack';
-        color: #f16d7f;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-  }
 
   .form {
     display: flex;
@@ -55,28 +56,30 @@ header {
     }
 
     button {
+      margin-left: 20px;
+      padding-left: 15px;
       display: block;
       border: solid 1px #e6e6e6;
       font-family: 'latolight';
       font-size: 14px;
-      font-weight: 300;
       line-height: 2.29;
       letter-spacing: 0.35px;
 
-      svg {
+      svg:first-child {
+        display: inline-block;
+        vertical-align: middle;
         width: 9px;
-        font-size: 14px;
-        margin-left: 8px;
-        margin-right: 5px;
-        line-height: 2.29;
         letter-spacing: 0.35px;
-        color: #838383;
+        fill: #838383;
+        padding-left: 5px;
+        padding-right: 10px;
+        margin-top: -3px;
       }
     }
 
     input {
       padding-left: 13px;
-      width: 317px;
+      width: 300px;
       border: solid 1px #e6e6e6;
       background-color: #ffffff;
       font-size: 14px;
@@ -85,6 +88,20 @@ header {
       letter-spacing: 0.35px;
       color: #a4a4a4;
     }
+
+    a {
+      display: block;
+      border-left: none;
+      border: solid 1px #e6e6e6;
+      background-color: #ffffff;
+      font-size: 14px;
+      padding: 10px;
+
+      svg {
+        width: 15px;
+        fill: #a4a4a4;
+      }
+    }
   }
 
   .my-account {
@@ -92,34 +109,37 @@ header {
     align-items: center;
     margin-left: auto;
 
-    a {
+    a:first-child {
       display: block;
       display: flex;
       text-decoration: none;
-
-      img {
-        margin: 26px;
-      }
+      margin-right: 26px;
     }
 
     a:last-child {
+      width: 130px;
       display: block;
-
-      color: #222222;
+      color: #ffffff;
       font-family: 'latoregular';
       font-size: 15px;
       line-height: 2.13;
       letter-spacing: 0.38px;
-      background-color: #ffffff;
+      background-color: #f16d7f;
+      text-decoration: none;
+      padding-left: 20px;
+      padding-top: 8px;
+      padding-bottom: 8px;
 
       svg {
+        display: inline-block;
+        vertical-align: middle;
         width: 9px;
         height: 14px;
         margin-left: 8px;
         font-size: 14px;
-        line-height: 2.29;
         letter-spacing: 0.35px;
-        color: #ffffff;
+        fill: #ffffff;
+        margin-top: -3px;
       }
     }
   }
@@ -305,51 +325,103 @@ section {
   gap: 20px;
 
   .img-wrap {
+    position: relative;
     height: 280px;
     overflow: hidden;
+
+    .shadow-card {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(black, .7);
+      display: none;
+
+      button {
+        margin: auto;
+        width: 123px;
+        border: solid 1px #ffffff;
+        background-color: rgba(white, .5);
+
+        span {
+          display: flex;
+
+          svg {
+            width: 23px;
+            padding: 8px;
+            fill: #ffffff;
+          }
+
+          h6 {
+            padding: 10px 5px 5px;
+            font-family: 'latobold';
+            font-size: 13px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    img {
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
   }
 
-  img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
+  .text {
+    padding: 20px;
+
+    h4 {
+      font-family: 'latoregular';
+      color: #222222;
+      margin-bottom: 17px;
+    }
+
+    span {
+      font-family: 'latobold';
+      font-size: 16px;
+      color: #f16d7f;
+    }
   }
 
-  h4 {
-    margin-top: 20px;
-    margin-left: 15px;
-    font-family: 'latoregular';
-    font-size: 13px;
-    font-weight: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #222222;
-  }
+  .card {
+    &:hover {
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16);
 
-  span {
-    margin-left: 15px;
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: normal;
-    color: #f16d7f;
+      .shadow-card {
+        display: flex;
+      }
+    }
   }
 }
 
 .button-mega {
   text-align: center;
 
-  button {
+  a {
+    display: block;
+    text-decoration: none;
     margin-top: 80px;
+    margin-left: 450px;
     width: 212px;
     border: none;
     font-family: 'latobold';
     font-size: 16px;
-    font-weight: bold;
     line-height: 3.38;
     letter-spacing: 0.4px;
     color: #ffffff;
     background-color: #f16d7f;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      width: 15px;
+      margin-left: 5px;
+      line-height: 3.6;
+      letter-spacing: 0.38px;
+      fill: #ffffff;
+    }
   }
 }
 
@@ -360,7 +432,7 @@ section {
   width: 100%;
 
   .project-left {
-    background-image: url("../img/ragazza.png");
+    background-image: url("../img/uraa.png");
     background-size: cover;
     background-position: right;
 
@@ -541,6 +613,8 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     p {
+      display: flex;
+      flex-wrap: wrap;
       width: 427px;
       margin: 50px 0;
       font-family: 'latolight';
@@ -622,9 +696,44 @@ footer {
             font-size: 16px;
             line-height: 2.63;
             letter-spacing: 0.4px;
-            color: #b2b2b2;
+            fill: #b2b2b2;
           }
         }
+      }
+    }
+  }
+}
+
+artical {
+  .menus {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      width: 176px;
+      height: 18px;
+      font-family: 'latoblack';
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 0.83;
+      color: #f16d7f;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+
+      li {
+        font-family: 'latolight';
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.43;
+        color: #636363;
+      }
+
+      li:last-child {
+        color: #f16d7f;
+        font-family: 'latobold';
       }
     }
   }
