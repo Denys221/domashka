@@ -81,34 +81,106 @@ header {
     display: flex;
     align-items: center;
     margin-left: auto; }
-    .header-top .my-account a:first-child {
-      display: block;
+    .header-top .my-account .wip {
       display: flex;
       text-decoration: none;
       margin-right: 26px; }
-    .header-top .my-account a:last-child {
-      width: 130px;
-      display: block;
-      color: #ffffff;
-      font-family: 'latoregular';
-      font-size: 15px;
-      line-height: 2.13;
-      letter-spacing: 0.38px;
-      background-color: #f16d7f;
-      text-decoration: none;
-      padding-left: 20px;
-      padding-top: 8px;
-      padding-bottom: 8px; }
-      .header-top .my-account a:last-child svg {
-        display: inline-block;
-        vertical-align: middle;
-        width: 9px;
-        height: 14px;
-        margin-left: 8px;
+    .header-top .my-account .drob-wrap {
+      position: relative; }
+      .header-top .my-account .drob-wrap:hover .my-account-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); }
+      .header-top .my-account .drob-wrap > a {
+        width: 130px;
+        display: block;
+        color: #ffffff;
+        font-family: 'latoregular';
+        font-size: 15px;
+        line-height: 2.13;
+        letter-spacing: 0.38px;
+        background-color: #f16d7f;
+        text-decoration: none;
+        padding-left: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px; }
+        .header-top .my-account .drob-wrap > a svg {
+          display: inline-block;
+          vertical-align: middle;
+          width: 9px;
+          height: 14px;
+          margin-left: 8px;
+          font-size: 14px;
+          letter-spacing: 0.35px;
+          fill: #ffffff;
+          margin-top: -3px; }
+      .header-top .my-account .drob-wrap .my-account-menu {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+        transform: translateY(-15px);
+        width: 264px;
+        padding: 20px 16px;
+        background-color: #fff;
+        left: -45%;
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        top: 55px; }
+        .header-top .my-account .drob-wrap .my-account-menu .my-account-item {
+          display: flex;
+          padding-bottom: 15px; }
+        .header-top .my-account .drob-wrap .my-account-menu .item-left {
+          min-width: 60px;
+          min-height: 65px;
+          width: 60px;
+          height: 65px;
+          margin-right: 16px;
+          overflow: hidden; }
+          .header-top .my-account .drob-wrap .my-account-menu .item-left img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%; }
+        .header-top .my-account .drob-wrap .my-account-menu .item-right {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          .header-top .my-account .drob-wrap .my-account-menu .item-right div:first-child h4 {
+            margin-bottom: 10px;
+            font-size: 12px;
+            text-transform: uppercase; }
+          .header-top .my-account .drob-wrap .my-account-menu .item-right div:first-child span {
+            display: block;
+            font-size: 12px;
+            color: #f16d7f;
+            text-transform: uppercase; }
+          .header-top .my-account .drob-wrap .my-account-menu .item-right div:last-child {
+            margin-top: 15px; }
+            .header-top .my-account .drob-wrap .my-account-menu .item-right div:last-child > a svg {
+              width: 16px;
+              height: 16px;
+              fill: #e8e8e8; }
+              .header-top .my-account .drob-wrap .my-account-menu .item-right div:last-child > a svg:hover {
+                fill: #f16d7f; }
+      .header-top .my-account .drob-wrap .prezzo {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px; }
+        .header-top .my-account .drob-wrap .prezzo span {
+          display: block; }
+      .header-top .my-account .drob-wrap .buttons a {
+        display: block;
+        border: 1px solid #eaeaea;
         font-size: 14px;
-        letter-spacing: 0.35px;
-        fill: #ffffff;
-        margin-top: -3px; }
+        text-transform: uppercase;
+        padding: 19px;
+        margin-top: 11px;
+        text-align: center;
+        color: #222222;
+        text-decoration: none; }
+        .header-top .my-account .drob-wrap .buttons a:hover {
+          background-color: #f16d7f;
+          color: #ffffff; }
 
 section {
   width: 100%;
@@ -245,23 +317,26 @@ section {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.7);
-      display: none; }
-      .mega-cards .img-wrap .shadow-card button {
+      display: flex;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s ease; }
+      .mega-cards .img-wrap .shadow-card a {
+        text-decoration: none;
         margin: auto;
         width: 123px;
         border: solid 1px #ffffff;
-        background-color: rgba(255, 255, 255, 0.5); }
-        .mega-cards .img-wrap .shadow-card button span {
-          display: flex; }
-          .mega-cards .img-wrap .shadow-card button span svg {
-            width: 23px;
-            padding: 8px;
-            fill: #ffffff; }
-          .mega-cards .img-wrap .shadow-card button span h6 {
-            padding: 10px 5px 5px;
-            font-family: 'latobold';
-            font-size: 13px;
-            color: #ffffff; }
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex; }
+        .mega-cards .img-wrap .shadow-card a svg {
+          width: 23px;
+          padding: 8px;
+          fill: #ffffff; }
+        .mega-cards .img-wrap .shadow-card a h6 {
+          padding: 10px 5px 5px 0;
+          font-family: 'latobold';
+          font-size: 13px;
+          color: #ffffff; }
     .mega-cards .img-wrap img {
       z-index: -1;
       position: absolute;
@@ -281,7 +356,8 @@ section {
   .mega-cards .card:hover {
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16); }
     .mega-cards .card:hover .shadow-card {
-      display: flex; }
+      opacity: 1;
+      visibility: visible; }
 
 .button-mega {
   text-align: center; }
@@ -361,27 +437,41 @@ section {
         letter-spacing: 0.35px;
         color: #fbfbfb; }
 
-.grid {
+.newsletter {
   width: 100%;
   margin-top: 98px;
-  background-image: url("../img/lodka.png");
-  background-size: cover;
-  background-position: center bottom; }
-  .grid .grid-mega {
+  position: relative;
+  overflow: hidden; }
+  .newsletter > img {
+    filter: grayscale(1);
+    opacity: 0.5;
+    width: 100%;
+    height: 440px;
+    position: absolute; }
+  .newsletter .grid-mega {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 440px; }
-    .grid .grid-mega .grid-left {
+    height: 440px;
+    position: relative; }
+    .newsletter .grid-mega .grid-left {
       display: flex; }
-      .grid .grid-mega .grid-left img {
+      .newsletter .grid-mega .grid-left > div:first-child {
+        display: block;
+        min-width: 83px;
         width: 83px;
         height: 83px;
         margin-top: 110px;
-        margin-right: 28px; }
-      .grid .grid-mega .grid-left .top-grid {
+        margin-right: 28px;
+        border-radius: 50%;
+        overflow: hidden; }
+        .newsletter .grid-mega .grid-left > div:first-child img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .newsletter .grid-mega .grid-left .top-grid {
         display: block;
         margin-top: 123px; }
-        .grid .grid-mega .grid-left .top-grid h6 {
+        .newsletter .grid-mega .grid-left .top-grid h6 {
           height: 68px;
           margin-right: 60px;
           margin-bottom: 19px;
@@ -390,18 +480,18 @@ section {
           line-height: 1.63;
           letter-spacing: 0.4px;
           color: #222224; }
-        .grid .grid-mega .grid-left .top-grid p {
+        .newsletter .grid-mega .grid-left .top-grid p {
           font-family: 'latolight';
           font-size: 12px;
           letter-spacing: 0.3px;
           color: #222224; }
-        .grid .grid-mega .grid-left .top-grid span {
+        .newsletter .grid-mega .grid-left .top-grid span {
           display: block;
           font-family: 'latobold';
           font-size: 16px;
           letter-spacing: 0.4px;
           color: #f16d7f; }
-    .grid .grid-mega .grid-right h5 {
+    .newsletter .grid-mega .grid-right h5 {
       margin: 148px 0 0 146px;
       font-family: 'latoregular';
       font-size: 14px;
@@ -409,14 +499,14 @@ section {
       line-height: 1.71;
       letter-spacing: 0.35px;
       color: #222224; }
-      .grid .grid-mega .grid-right h5 span {
+      .newsletter .grid-mega .grid-right h5 span {
         margin-left: 79px;
         display: block;
         text-transform: uppercase;
         font-family: 'latoregular';
         font-size: 24px;
         letter-spacing: 0.6px; }
-    .grid .grid-mega .grid-right input {
+    .newsletter .grid-mega .grid-right input {
       margin-left: 92px;
       margin-top: 35px;
       width: 334px;
@@ -430,7 +520,7 @@ section {
       letter-spacing: 0.35px;
       color: rgba(34, 34, 36, 0.67);
       padding-left: 28px; }
-    .grid .grid-mega .grid-right button {
+    .newsletter .grid-mega .grid-right button {
       width: 104px;
       height: 46px;
       margin-left: -4px;
@@ -449,16 +539,11 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; }
     footer .footer-top p {
-      display: flex;
-      flex-wrap: wrap;
       width: 427px;
-      margin: 50px 0;
+      margin: 30px 0;
       font-family: 'latolight';
       font-size: 14px;
-      font-weight: 300;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1;
+      line-height: 1.71;
       letter-spacing: 0.35px;
       color: #898989; }
     footer .footer-top h5 {
@@ -487,9 +572,9 @@ footer {
     margin-top: 98px;
     height: 78px; }
     footer .footer-bottom .text {
-      display: block;
+      align-items: center;
       display: flex;
-      padding-top: 32px; }
+      height: 79px; }
       footer .footer-bottom .text p {
         width: 100%;
         font-family: 'latoregular';
@@ -499,23 +584,24 @@ footer {
       footer .footer-bottom .text ul {
         list-style-type: none;
         display: flex; }
-        footer .footer-bottom .text ul li {
+        footer .footer-bottom .text ul a {
+          display: block;
           width: 32px;
-          height: 32px;
+          height: 25px;
+          padding-top: 7px;
           margin-right: 10px;
           background-color: #ffffff;
           text-align: center;
           font-family: 'latoregular';
           font-size: 16px; }
-          footer .footer-bottom .text ul li svg:hover {
-            color: red; }
-          footer .footer-bottom .text ul li svg {
-            width: 15px;
-            height: 30px;
-            font-size: 16px;
-            line-height: 2.63;
-            letter-spacing: 0.4px;
+          footer .footer-bottom .text ul a svg {
+            height: 15px;
             fill: #b2b2b2; }
+          footer .footer-bottom .text ul a:hover {
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+            background-color: #f16d7f; }
+            footer .footer-bottom .text ul a:hover svg {
+              fill: #f7f7f8; }
 
 artical .menus {
   display: flex;
